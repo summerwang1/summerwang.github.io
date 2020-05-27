@@ -14,6 +14,8 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-pace-theme-mac-osx.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -77,6 +79,10 @@
   </style>
 </noscript>
 
+    <!-- 爆炸效果 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script type="text/javascript" src="/js/firework.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -148,6 +154,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -157,6 +164,88 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/Android%E5%8E%9F%E7%94%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%ABCamera2-FaceDetector-%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Sar-Wang">
+      <meta itemprop="description" content="海纳百川，有容乃大，壁立千仞，无欲则刚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sar-wang 小码站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/27/Android%E5%8E%9F%E7%94%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%ABCamera2-FaceDetector-%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B/" class="post-title-link" itemprop="url">Android原生人脸识别Camera2+FaceDetector 快速实现人脸跟踪</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-27 14:02:13 / 修改时间：18:10:12" itemprop="dateCreated datePublished" datetime="2020-05-27T14:02:13+08:00">2020-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">分类</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本篇主要介绍Android原生Api人脸检测FaceDetector的使用，该方法检测人脸可以<br>做到的是，检测到屏幕有无人脸，有多少个人脸，人脸的双眼眉心位置2d坐标，双眼间距，<br>但是本人测到该方法的坑，检测有无人脸确实好用，但是如果要精确的测量人脸位置，距离等，会有偏差，毕竟是2d坐标，对现实<br>定位不准确，我感觉可以这样理解，<br>然后大家如果要实现该功能的时候，如果这些不够用，就不用考虑该方法了。<br>废话不多说，实现开始，</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/27/Android%E5%8E%9F%E7%94%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%ABCamera2-FaceDetector-%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+    
+    
+    <script type="text/javascript" src="/js/fold_action.js"></script>
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -184,10 +273,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-21 11:35:51 / 修改时间：17:09:30" itemprop="dateCreated datePublished" datetime="2020-05-21T11:35:51+08:00">2020-05-21</time>
+              <time title="创建时间：2020-05-21 11:35:51" itemprop="dateCreated datePublished" datetime="2020-05-21T11:35:51+08:00">2020-05-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-27 18:50:54" itemprop="dateModified" datetime="2020-05-27T18:50:54+08:00">2020-05-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -226,7 +321,14 @@
         
       
     </div>
-
+    
+    <div>
+      
+    </div>
+    
+    
+    <script type="text/javascript" src="/js/fold_action.js"></script>
+    
     
     
     
@@ -273,7 +375,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-21 17:03:17" itemprop="dateModified" datetime="2020-05-21T17:03:17+08:00">2020-05-21</time>
+                <time title="修改时间：2020-05-25 14:18:49" itemprop="dateModified" datetime="2020-05-25T14:18:49+08:00">2020-05-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -310,7 +412,14 @@
         
       
     </div>
-
+    
+    <div>
+      
+    </div>
+    
+    
+    <script type="text/javascript" src="/js/fold_action.js"></script>
+    
     
     
     
@@ -390,20 +499,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -477,6 +586,7 @@ partial('_partial/livere')
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -490,6 +600,7 @@ partial('_partial/livere')
 
 
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -517,3 +628,33 @@ partial('_partial/livere')
 
 </body>
 </html>
+<script>
+    /* 鼠标特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("Alliot", "最帅", "最帅！", "最帅！！");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#b7b7b7"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+</script>
